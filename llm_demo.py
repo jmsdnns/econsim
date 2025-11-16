@@ -8,7 +8,7 @@ import os
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
-from simulator import Agent, Market, OrderType
+from simulator import Agent, Market
 
 
 def run_llm_simulation(num_rounds: int = 5, debug: bool = False):
@@ -104,7 +104,7 @@ def run_llm_simulation(num_rounds: int = 5, debug: bool = False):
                 market.submit_order(order)
                 print(f"    Decision: {order}")
             else:
-                print(f"    Decision: HOLD")
+                print("    Decision: HOLD")
 
         # match orders and execute trades
         print("\n" + "-" * 60)
